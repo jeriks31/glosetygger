@@ -14,6 +14,8 @@
     font-family: "Calibri";
     color: var(--lightest);
     font-size:18pt;
+    
+    box-sizing: border-box;
 }
 body{
     display:flex;
@@ -24,7 +26,6 @@ body{
     margin-top: 10px;
     min-height: calc(100vh - 10px);
     background-color: var(--darker);
-    box-sizing: border-box;
     padding:5px;
     
     display:flex;
@@ -38,6 +39,7 @@ body{
 input{
     background-color:#333;
     border: 2px solid var(--darkest);
+    border-radius:5px;
 }
 
 button{
@@ -64,4 +66,7 @@ table{
 #outGloseDisplay>tr>td:nth-child(3),
 #windowEdit>table>thead>tr>th:nth-child(3){
     width:70px;
+}
+#outGloseTest input{
+    width:100%;
 }

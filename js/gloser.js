@@ -50,9 +50,9 @@ function goToEdit(){
 function sjekkSvar(){
     for(let i=0; i<gloseliste.gloser.length; i++){
         if(gloseliste.gloser[i][1].toLowerCase() == document.getElementById("inpTest"+i).value.toLowerCase()){
-            document.getElementById("inpTest"+i).style.backgroundColor = "green";
+            document.getElementById("inpTest"+i).style.borderColor = "green";
         }else{
-            document.getElementById("inpTest"+i).style.backgroundColor = "red";
+            document.getElementById("inpTest"+i).style.borderColor = "red";
         }
     }
 }
