@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gloseprogram</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="windowEdit">
+                <div id="inputs">
+                    <label>Språk 1:</label>
+                    <input type="text" id="inpLang1">
+                    <label>Språk 2:</label>
+                    <input type="text" id="inpLang2">
+                    <button id="btnSubmit" onclick="addGlose()">Legg til Glose</button>
+                    <button id="btnGoToTest" onclick="goToTest()">Start test</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Språk 1</th>
+                            <th>Språk 2</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outGloseDisplay"></tbody>
+                </table>
+            </div>
+            <div id="windowTest" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Språk 1</th>
+                            <th>Språk 2</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outGloseTest"></tbody>
+                </table>
+                <div id="buttons">
+                    <button onclick="goToEdit()">Endre gloselisten</button>
+                    <button onclick="sjekkSvar()">Sjekk Svar</button>
+                    <button onclick="startTest()">Prøv pånytt</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="js/gloser.js"></script>
+    </body>
+</html>
