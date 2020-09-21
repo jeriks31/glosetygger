@@ -87,6 +87,7 @@ function shuffle(array) {
 function checkLocalStorage(){
     if(localStorage.getItem("gloseliste")){
         gloseliste = JSON.parse(localStorage.getItem("gloseliste"));
+        updateGloseDisplay();
     }
 }
 
