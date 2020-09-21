@@ -15,6 +15,7 @@ let gloseliste = {
 function addGlose(){
     if(inpLang1.value && inpLang2.value){
         gloseliste.gloser.push([inpLang1.value, inpLang2.value]);
+        updateLocalStorage();
         updateGloseDisplay();
     }else{
         alert("Vennligst skriv inn en glose før du trykker på knappen");
@@ -22,7 +23,8 @@ function addGlose(){
 }
 
 function fjernGlose(index){
-    gloseliste.gloser.splice(index, 1)
+    gloseliste.gloser.splice(index, 1);
+    updateLocalStorage();
     updateGloseDisplay();
 }
 
@@ -80,4 +82,14 @@ function shuffle(array) {
         array[index] = temp;
     }
     return array;
+}
+
+function checkLocalStorage(){
+    if(localStorage.getItem("gloseliste")){
+        gloseliste = JSON.parse(localStorage.getItem("gloseliste"));
+    }
+}
+
+function updateLocalStorage(){
+    localStorage.setItem("gloseliste", JSON.stringify(gloseliste));
 }
